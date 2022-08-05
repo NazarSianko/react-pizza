@@ -1,5 +1,5 @@
 import React from 'react';
-import { Categories, SortPopup, PizzaBlock, LoadingBlock } from '../components';
+import { Categories, SortPopup, PizzaBlock, LoadingBlock, Button } from '../components';
 import { useSelector } from 'react-redux';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { useDispatch } from 'react-redux';
@@ -61,7 +61,8 @@ function Home() {
           activeCategory={category}
           items={categoryNames}
         />
-        <SortPopup activeSortType={sortBy.type} items={sortItems} onClickSort={onSelectPopup} />
+       
+               <SortPopup activeSortType={sortBy.type} items={sortItems} onClickSort={onSelectPopup} />
       </nav>
       <h1 className="main-logo">Все пиццы</h1>
       <section className="pizza-menu">

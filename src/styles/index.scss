@@ -430,7 +430,7 @@ h1 {
                 .main_item_left {
                     display: flex;
                     align-items: center;
-                    width:370px;
+                    width: 370px;
                     .main_item_text {
                         margin-left: 15px;
                     }
@@ -568,8 +568,8 @@ h1 {
 }
 .empty-basket-msg {
     & a {
-        display:block;
-        margin:0 auto;
+        display: block;
+        margin: 0 auto;
     }
     margin-top: 100px;
     display: flex;
@@ -619,6 +619,65 @@ h1 {
         cursor: pointer;
     }
 }
+.popup-button {
+    cursor: pointer;
+    justify-self: center;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    height: 46px;
+    width: 150px;
+    align-items: center;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.015em;
+    text-align: center;
+    display: none;
+}
+.popup-filter {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    top: 60px;
+    left: 0px;
+    background: #ffffff;
+    justify-content: center;
+    border-radius: 10px;
+    display: none;
+    margin: 0 auto;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    padding:10px 0px 0px 10px;
+    .filter-item {
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 38px;
+        height: 38px;
+        letter-spacing: 0.015em;
+        color: #000000;
+        cursor: pointer;
+        padding-left: 10px;
+        transition: 0.5s;
+        &:hover {
+            background: #fe5f1e0d;
+        }
+    }
+    .filter-active {
+        background: #fe5f1e0d;
+        color: #fe5f1e;
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0.015em;
+        text-align: left;
+    }
+}
 @media (max-width: 1480px) {
     .pizza-menu {
         justify-content: center;
@@ -636,10 +695,67 @@ h1 {
 @media (max-width: 1120px) {
     .nav-list {
         max-width: 450px;
-        
+        margin-left: 100px;
     }
     .main-nav {
         grid-template-columns: 6fr 2fr;
         justify-content: center;
+    }
+}
+@media (max-width: 880px) {
+    .main-nav {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        padding: 0px;
+        .nav-list {
+            margin: 0 auto;
+        }
+        .main-sort {
+            flex-direction: row;
+        }
+    }
+}
+@media (max-width: 590px) {
+    .wrapper {
+        margin: 30px auto;
+    }
+    .header-top {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        padding-left: 38px;
+        padding-bottom: 50px;
+    }
+    .popup-button {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .categories {
+        margin: 0 auto;
+        position: relative;
+    }
+    .popup-filter {
+        display: block;
+    }
+
+    .main-logo {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .main-nav {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-bottom: 30px;
+        .main-sort {
+            margin-top: 4px;
+            padding: 0px;
+
+            flex-direction: column;
+        }
     }
 }
