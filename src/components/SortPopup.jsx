@@ -29,7 +29,7 @@ const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClick
       <div className="sort-text">Сортировка по:</div>
       <div className="sort-choice" onClick={togglePopup}>
         <div className="choice"> {activeLabel}</div>
-      </div>
+   
 
       {isOpen && (
         <div className="sort-list">
@@ -43,6 +43,7 @@ const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClick
           ))}
         </div>
       )}
+         </div>
     </div>
   );
 });

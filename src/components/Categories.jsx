@@ -40,8 +40,8 @@ const Categories = React.memo(function Categories({ items, onClickCategory, acti
          
 
         </ul>
-        <Button className='popup-button' onClick={toggleFilter}> Фильтрация </Button>
-        {filterFlag && <FilterPopUp array = {items}/>}
+        <Button className='popup-button' onClick={toggleFilter}> Категории </Button>
+        {filterFlag && <FilterPopUp filterClick={onSelectedItem} activeFilterCategory={activeCategory}  array = {items} flag = {stateFilterFlag}/>}
         </div>
         
    

@@ -155,7 +155,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+   
     .sort-text {
         font-family: "Proxima Nova";
         font-size: 14px;
@@ -164,6 +164,9 @@ body {
         letter-spacing: 0.015em;
         text-align: left;
     }
+    .sort-choice {
+        position:relative;
+ 
     .choice {
         cursor: pointer;
         padding-left: 8px;
@@ -185,8 +188,7 @@ body {
         position: absolute;
         width: 132px;
         height: 136px;
-        top: 50px;
-        left: 170px;
+        
         background: #ffffff;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
         border-radius: 10px;
@@ -217,6 +219,8 @@ body {
             text-align: left;
         }
     }
+
+}
 }
 h1 {
     font-family: "Proxima Nova";
@@ -640,18 +644,22 @@ h1 {
     flex-direction: column;
     list-style: none;
     position: absolute;
-    width: 200px;
-    height: 400px;
-    top: 60px;
+    width: 150px;
+    height: 250px;
+    top: 50px;
     left: 0px;
     background: #ffffff;
     justify-content: center;
     border-radius: 10px;
-    display: none;
     margin: 0 auto;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
     border-radius: 10px;
-    padding:10px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
+    -webkit-transition: bottom, opacity, ease-out 0.2s;
+    -moz-transition: bottom, opacity, ease-out 0.2s;
+    -o-transition: bottom, opacity, ease-out 0.2s;
+    transition: bottom, opacity, ease-out 0.2s;
+
     .filter-item {
         font-family: "Proxima Nova";
         font-size: 14px;
@@ -687,6 +695,11 @@ h1 {
     .main-sort {
         padding-right: 20px;
         flex-direction: column;
+        .sort-choice {
+            .sort-list {
+                left:-10px;
+            }
+        }
     }
     .main-nav {
         grid-template-columns: 7fr 1fr;
@@ -716,6 +729,20 @@ h1 {
         }
     }
 }
+@media (max-width: 768px) {
+   
+        .wrapper {
+            width: calc(100vw - 20px);
+            
+            margin: 10px auto;
+         .main-logo {
+            text-align: center;
+            margin:0px;
+            margin-bottom:50px;
+         }
+        }
+    
+}
 @media (max-width: 590px) {
     .wrapper {
         margin: 30px auto;
@@ -737,9 +764,7 @@ h1 {
         margin: 0 auto;
         position: relative;
     }
-    .popup-filter {
-        display: block;
-    }
+  
 
     .main-logo {
         margin: 0 auto;
