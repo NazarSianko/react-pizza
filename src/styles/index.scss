@@ -4,11 +4,17 @@ body {
         "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #ffdf8c;
     & a {
         text-decoration: none;
     }
     & button {
         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    & button:focus {
+        outline: none;
     }
 }
 
@@ -16,9 +22,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 @import "fonts.scss";
-body {
-    background-color: #ffdf8c;
-}
+
 .wrapper {
     width: calc(100vw - 100px);
     height: 100%;
