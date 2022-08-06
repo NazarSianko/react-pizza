@@ -17,6 +17,11 @@ body {
         outline: none;
     }
 }
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -643,8 +648,17 @@ h1 {
     line-height: 46px;
     letter-spacing: 0.015em;
     text-align: center;
-    display: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+}
+button {
+    .popup-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 }
 .popup-filter {
     display: flex;
