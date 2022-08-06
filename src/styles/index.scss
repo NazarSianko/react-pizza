@@ -7,6 +7,9 @@ body {
     & a {
         text-decoration: none;
     }
+    & button {
+        -webkit-appearance: none;
+    }
 }
 
 code {
@@ -155,7 +158,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
     .sort-text {
         font-family: "Proxima Nova";
         font-size: 14px;
@@ -165,62 +168,61 @@ body {
         text-align: left;
     }
     .sort-choice {
-        position:relative;
- 
-    .choice {
-        cursor: pointer;
-        padding-left: 8px;
-        color: #fe5f1e;
-        font-family: "Proxima Nova";
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        height: 21px;
-        display: inline-block;
-        padding-bottom: 3px;
-        letter-spacing: 0.015em;
-        text-align: left;
-    }
-    .sort-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        width: 132px;
-        height: 136px;
-        
-        background: #ffffff;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
-        border-radius: 10px;
-        .sort-item {
-            font-family: "Proxima Nova";
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 38px;
-            height: 38px;
-            letter-spacing: 0.015em;
-            color: #000000;
-            cursor: pointer;
-            padding-left: 10px;
-            transition: 0.5s;
-            &:hover {
-                background: #fe5f1e0d;
-            }
-        }
+        position: relative;
 
-        .sort-active {
-            background: #fe5f1e0d;
+        .choice {
+            cursor: pointer;
+            padding-left: 8px;
             color: #fe5f1e;
             font-family: "Proxima Nova";
             font-size: 14px;
-            font-weight: 700;
-            line-height: 38px;
+            font-weight: 400;
+            line-height: 21px;
+            height: 21px;
+            display: inline-block;
+            padding-bottom: 3px;
             letter-spacing: 0.015em;
             text-align: left;
         }
-    }
+        .sort-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            width: 132px;
+            height: 136px;
 
-}
+            background: #ffffff;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+            .sort-item {
+                font-family: "Proxima Nova";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 38px;
+                height: 38px;
+                letter-spacing: 0.015em;
+                color: #000000;
+                cursor: pointer;
+                padding-left: 10px;
+                transition: 0.5s;
+                &:hover {
+                    background: #fe5f1e0d;
+                }
+            }
+
+            .sort-active {
+                background: #fe5f1e0d;
+                color: #fe5f1e;
+                font-family: "Proxima Nova";
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 38px;
+                letter-spacing: 0.015em;
+                text-align: left;
+            }
+        }
+    }
 }
 h1 {
     font-family: "Proxima Nova";
@@ -698,7 +700,7 @@ h1 {
         flex-direction: column;
         .sort-choice {
             .sort-list {
-                left:-10px;
+                left: -10px;
             }
         }
     }
@@ -731,18 +733,16 @@ h1 {
     }
 }
 @media (max-width: 768px) {
-   
-        .wrapper {
-            width: calc(100vw - 20px);
-            
-            margin: 10px auto;
-         .main-logo {
+    .wrapper {
+        width: calc(100vw - 20px);
+
+        margin: 10px auto;
+        .main-logo {
             text-align: center;
-            margin:0px;
-            margin-bottom:50px;
-         }
+            margin: 0px;
+            margin-bottom: 50px;
         }
-    
+    }
 }
 @media (max-width: 590px) {
     .wrapper {
@@ -765,7 +765,6 @@ h1 {
         margin: 0 auto;
         position: relative;
     }
-  
 
     .main-logo {
         margin: 0 auto;
