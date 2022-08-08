@@ -436,6 +436,7 @@ h1 {
             display: flex;
             flex-direction: column;
             padding: 50px 10px 0px 10px;
+
             .basket-main_item {
                 display: flex;
                 align-items: center;
@@ -446,6 +447,7 @@ h1 {
                     display: flex;
                     align-items: center;
                     width: 370px;
+
                     .main_item_text {
                         margin-left: 15px;
                     }
@@ -500,14 +502,14 @@ h1 {
                 }
             }
         }
-        .basket-total {
+        .basket-total-amount {
             display: flex;
             justify-content: space-between;
             margin-bottom: 40px;
             padding: 0px 10px;
 
-            .basket-total_count,
-            .basket-total_price {
+            .basket-total-amount_count,
+            .basket-total-amount_price {
                 display: flex;
                 .count-number,
                 .total-price_amount {
@@ -709,9 +711,25 @@ button {
         text-align: left;
     }
 }
+.uparrow {
+   
+    position:fixed;
+    right:5%;
+    bottom: 5%; 
+    & img {
+        width:50px;
+        height: 50px;
+    }
+    display:block;
+    & .show {
+        display:block;
+    }
+}
+
 @media (max-width: 1480px) {
     .pizza-menu {
         justify-content: center;
+        padding: 0px 67px 67px 67px;
     }
 }
 @media (max-width: 1280px) {
@@ -738,6 +756,14 @@ button {
         justify-content: center;
     }
 }
+@media (max-width: 940px) {
+    .basket-content {
+        padding: 20px 20px 0px 20px;
+    }
+    .header-top {
+        padding: 52px 38px 72px 38px;
+    }
+}
 @media (max-width: 880px) {
     .main-nav {
         grid-template-rows: 1fr 1fr;
@@ -755,6 +781,9 @@ button {
 @media (max-width: 768px) {
     .wrapper {
         width: calc(100vw - 20px);
+        .pizza-menu {
+            padding: 0px 87px 67px 87px;
+        }
 
         margin: 10px auto;
         .main-logo {
@@ -764,6 +793,19 @@ button {
         }
     }
 }
+@media (max-width: 690px) {
+    .basket-main_item {
+        flex-direction: column;
+        row-gap: 20px;
+        position: relative;
+        .main_item_delete {
+            position: absolute;
+            margin-left: 450px;
+            margin-top: 20px;
+        }
+    }
+}
+
 @media (max-width: 590px) {
     .wrapper {
         margin: 30px auto;
@@ -774,6 +816,7 @@ button {
         row-gap: 30px;
         padding-left: 38px;
         padding-bottom: 50px;
+        justify-content: center;
     }
     .popup-button {
         display: block;
@@ -802,5 +845,73 @@ button {
 
             flex-direction: column;
         }
+    }
+    .basket-content {
+        padding-top: 0px;
+    }
+}
+@media (max-width: 510px) {
+    .basket-total-amount {
+        flex-direction: column;
+    }
+    .basket-content {
+        .basket-container {
+            .basket-confirm {
+                flex-direction: column;
+
+                align-items: center;
+                row-gap: 20px;
+            }
+        }
+    }
+    .basket-content .basket-container .basket-main .basket-main_item .main_item_left {
+        width: 340px;
+    }
+    .basket-main_item .main_item_delete {
+        margin-left: 330px;
+        margin-top: 20px;
+    }
+}
+@media (max-width:430px) {
+    .uparrow {
+        right:1%;
+        & img {
+            width:25px;
+            height: 25px;
+        }
+    }
+}
+@media (max-width: 418px) {
+    .header-top {
+        justify-content: center;
+        &__title {
+            padding-left: 30px;
+        }
+    }
+    
+    .basket-top {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .basket-content .basket-container .basket-main .basket-main_item .main_item_left {
+        width: 250px;
+    }
+    .basket-main_item .main_item_delete {
+        margin-left: 300px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 378px) {
+    .header-top__title {
+        padding-left: 10px;
+    }
+}
+@media (max-width: 358px) {
+    .basket-main_item .main_item_delete {
+        margin-left: 250px;
+        margin-top: 20px;
+    }
+    .main-nav {
+        padding: 0px 10px;
     }
 }

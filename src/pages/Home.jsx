@@ -24,6 +24,7 @@ const sortItems = [
   },
 ];
 function Home() {
+  
   const dispatch = useDispatch();
   const items = useSelector(({ pizzas }) => pizzas.items);
   const isLoaded = useSelector(({ pizzas }) => pizzas.isLoaded);
@@ -35,7 +36,7 @@ function Home() {
       payload: obj,
     });
   };
-
+ console.log(category)
   const onSelectCategory = React.useCallback(
     (index) => {
       dispatch(setCategory(index));
@@ -54,7 +55,9 @@ function Home() {
   }, [category, sortBy]);
 
   return (
+  
     <main className="main">
+      
       <nav className="main-nav">
         <Categories
           onClickCategory={onSelectCategory}
@@ -64,7 +67,7 @@ function Home() {
        
                <SortPopup activeSortType={sortBy.type} items={sortItems} onClickSort={onSelectPopup} />
       </nav>
-      <h1 className="main-logo">Все пиццы</h1>
+      <h1 className="main-logo">{category == null ? 'Все пиццы' : categoryNames[category]}</h1>
       <section className="pizza-menu">
         {isLoaded
           ? items.map((obj) => (

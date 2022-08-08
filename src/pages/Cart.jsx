@@ -62,12 +62,12 @@ function Cart() {
             ))}
             
           </div>
-          <div className="basket-total">
-            <div className="basket-total_count">
+          <div className="basket-total-amount">
+            <div className="basket-total-amount_count">
               <div className="count-text">Всего пицц:</div>
               <div className="count-number">{totalCount} шт.</div>
             </div>
-            <div className="basket-total_price">
+            <div className="basket-total-amount_price">
               <div className="total-price_text">Сумма заказа:</div>
               <div className="total-price_amount">{totalPrice} ₽</div>
             </div>
