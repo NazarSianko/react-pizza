@@ -18,12 +18,13 @@ function App() {
   };
   useEffect(() => {
     document.addEventListener('scroll', showOffset);
-    console.log(pageOffset);
+ 
   }, [pageOffset]);
+  
 
   return (
     <div className="wrapper">
-      {pageOffset > 150 ? <UpArrow onChange={() => setOffset(window.pageYOffset)} /> : ''}
+      {pageOffset > 150 ? <UpArrow/> : ''}
 
       <Header />
       <Routes>
