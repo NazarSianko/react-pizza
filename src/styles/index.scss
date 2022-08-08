@@ -712,18 +712,17 @@ button {
     }
 }
 .uparrow {
-   
-    position:fixed;
-    right:5%;
-    bottom: 5%; 
-    cursor:pointer;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    cursor: pointer;
     & img {
-        width:50px;
+        width: 50px;
         height: 50px;
     }
-    display:block;
+    display: block;
     & .show {
-        display:block;
+        display: block;
     }
 }
 
@@ -873,14 +872,13 @@ button {
         margin-top: 20px;
     }
 }
-@media (max-width:430px) {
+@media (max-width: 430px) {
     .uparrow {
-        right:3%;
+        right: 2%;
         & img {
-            width:35px;
+            width: 35px;
             height: 35px;
         }
-       
     }
 }
 @media (max-width: 418px) {
@@ -890,7 +888,7 @@ button {
             padding-left: 30px;
         }
     }
-    
+
     .basket-top {
         flex-direction: column;
         row-gap: 20px;
