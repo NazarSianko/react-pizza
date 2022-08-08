@@ -802,7 +802,6 @@ button {
             position: absolute;
             margin-left: 450px;
             margin-top: 20px;
-            -webkit-appearance: none;
         }
     }
 }
@@ -868,11 +867,9 @@ button {
     .basket-content .basket-container .basket-main .basket-main_item .main_item_left {
         width: 340px;
     }
-    .basket-main_item {
-        .main_item_delete {
-            margin-left: 0px;
-            margin-top: 20px;
-        }
+    .basket-main_item .main_item_delete {
+        margin-left: 330px;
+        margin-top: 20px;
     }
 }
 @media (max-width: 430px) {
@@ -900,7 +897,7 @@ button {
         width: 250px;
     }
     .basket-main_item .main_item_delete {
-        margin-left: 300px;
+        margin-left: 100px;
         margin-top: 20px;
     }
 }
