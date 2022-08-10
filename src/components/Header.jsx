@@ -28,7 +28,7 @@ function Header() {
               <div className="basket-total">
                 {totalCount}
                 <div className="cart-svg">
-                  <img src="./shopping.svg" alt="" className="trach" />
+                  <img src="./shopping.svg" alt="" className="trash" />
                 </div>
               </div>
             </Button>

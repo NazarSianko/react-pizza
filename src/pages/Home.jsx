@@ -36,7 +36,7 @@ function Home() {
       payload: obj,
     });
   };
- console.log(category)
+ 
   const onSelectCategory = React.useCallback(
     (index) => {
       dispatch(setCategory(index));
